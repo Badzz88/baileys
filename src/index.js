@@ -63,7 +63,7 @@ Version: 1.0
 Status: Baileys Berhasil Terinstall
 Update date: 17/08/26
 `));
-console.log(chalk.bold.cyan("Follow Our Telegram Channel To See Update Information: t.me/FoxsSql\n"));
+console.log(chalk.bold.cyan("Follow Our Telegram Channel To See Update Information: t.me/Infokaizenn\n"));
 console.log(chalk.bold.gray("--------------------------------------------\n"));
 const index_1 = __importDefault(require('./Socket/index'));
 exports.makeWASocket = index_1.default;
