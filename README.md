@@ -1,4 +1,4 @@
-# @kaizsenjir/baileys
+# @kaizenjir/baileys
 
 A high-performance WhatsApp Web library built on [Baileys](https://github.com/WhiskeySockets/Baileys), with critical paths accelerated via a [Rust WASM bridge](https://github.com/7ucg/whatsapp-rust-bridge).
 
