@@ -56,10 +56,10 @@ console.log(chalk.bold.cyan(`
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢿⡄⠀⠀⠀⠀⣰⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠆⠀⠀⠐⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀
-¤═―— ⎧ 𝐁𝐀𝐃𝐙𝐙 𝐁𝐀𝐈𝐋𝐄𝐘𝐒 ⎭ ⊱―—═¤
+¤═―— ⎧ 𝐊𝐀𝐈𝐙𝐄𝐍 𝐁𝐀𝐈𝐋𝐄𝐘𝐒 ⎭ ⊱―—═¤
 Information:
-Developer: @badzzne2
-Version: 12.1
+Developer: @KaizennTzyy
+Version: 1.0
 Status: Baileys Berhasil Terinstall
 Update date: 17/08/26
 `));
