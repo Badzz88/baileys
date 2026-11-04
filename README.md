@@ -1,22 +1,22 @@
-# @badzz88/baileys
+# @kaizenjir/baileys
 
 A high-performance WhatsApp Web library built on [Baileys](https://github.com/WhiskeySockets/Baileys), with critical paths accelerated via a [Rust WASM bridge](https://github.com/7ucg/whatsapp-rust-bridge).
 
 <p align="center">
-  <img alt="package" src="https://img.shields.io/badge/package-%40badzz88%2Fbaileys-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
+  <img alt="package" src="https://img.shields.io/badge/package-%40kaizenjir%2Fbaileys-25D366?style=for-the-badge&logo=whatsapp&logoColor=white">
   <img alt="version" src="https://img.shields.io/badge/version-1.1.8-blue?style=for-the-badge">
 </p>
 <p align="center">
-  <a href="https://t.me/FoxsSql"><img alt="Telegram" src="https://img.shields.io/badge/Telegram-FoxsSql-26A5E4?style=for-the-badge&logo=telegram&logoColor=white"></a>
-  <a href="https://github.com/Badzz88"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Badzz88-181717?style=for-the-badge&logo=github&logoColor=white"></a>
+  <a href="https://t.me/KaizennTzyy"><img alt="Telegram" src="https://img.shields.io/badge/Telegram-FoxsSql-26A5E4?style=for-the-badge&logo=telegram&logoColor=white"></a>
+  <a href="https://github.com/kaizenjir"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Badzz88-181717?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
 
 | | |
 |---|---|
-| 📦 **Package** | `@badzz88/baileys` |
-| 🏷️ **Version** | `8.5.3` |
-| 💬 **Telegram** | [t.me/FoxsSql](https://t.me/FoxsSql) |
-| 🐙 **GitHub** | [github.com/Badzz88](https://github.com/Badzz88) |
+| 📦 **Package** | `@kaizenjir/baileys` |
+| 🏷️ **Version** | `1.0` |
+| 💬 **Telegram** | [t.me/KaizennTzyy](https://t.me/KaizennTzyy) |
+| 🐙 **GitHub** | [github.com/kaizenjir](https://github.com/kaizenjir) |
 
 ---
 
@@ -96,9 +96,9 @@ A high-performance WhatsApp Web library built on [Baileys](https://github.com/Wh
 ## Installation
 
 ```bash
-npm install npm:@badzz88/baileys
+npm install npm:@kaizenjir/baileys
 # or
-yarn add npm:@badzz88/baileys
+yarn add npm:@kaizenjir/baileys
 ```
 
 **Requirements:** Node.js ≥ 20
@@ -116,7 +116,7 @@ yarn add npm:@badzz88/baileys
 
 ```bash
 pkg install nodejs-lts
-npm install npm:@badzz88/baileys
+npm install npm:@kaizenjir/baileys
 ```
 
 `whatsapp-rust-bridge` compiles to **WASM**, not a platform-specific native binary, and
@@ -148,7 +148,7 @@ If you ever do need to build it from source (e.g. `WHATSAPP_RUST_BRIDGE_SKIP_PRE
 
 ```bash
 pkg install rust binutils
-npm install npm:@badzz88/baileys
+npm install npm:@kaizenjir/baileys
 ```
 
 > **Note:** some published versions of the bridge ship a `package.json` whose
@@ -187,7 +187,7 @@ prebuilt WASM bridge and `sharp`'s prebuilt binaries. Checklist:
 ### QR Code
 
 ```js
-const { makeWASocket, useMultiFileAuthState, DisconnectReason } = require('@badzz88/baileys')
+const { makeWASocket, useMultiFileAuthState, DisconnectReason } = require('@kaizenjir/baileys')
 const { Boom } = require('@hapi/boom')
 
 const { state, saveCreds } = await useMultiFileAuthState('./auth')
@@ -247,7 +247,7 @@ const sock = makeWASocket({
 ## Saving & Restoring Sessions
 
 ```js
-const { useMultiFileAuthState } = require('@badzz88/baileys')
+const { useMultiFileAuthState } = require('@kaizenjir/baileys')
 
 const { state, saveCreds } = await useMultiFileAuthState('./auth')
 // Pass state to makeWASocket, call saveCreds on creds.update
@@ -450,7 +450,7 @@ sock.ev.on('galaxy.flow.completed', ({ message }) => { })
 ### Decrypt Poll Votes
 
 ```js
-const { getAggregateVotesInPollMessage } = require('@badzz88/baileys')
+const { getAggregateVotesInPollMessage } = require('@kaizenjir/baileys')
 
 sock.ev.on('messages.update', async updates => {
     for (const { key, update } of updates) {
@@ -469,7 +469,7 @@ sock.ev.on('messages.update', async updates => {
 
 ## Anti-Ban System
 
-Import from `@badzz88/baileys/src/antiban.js`:
+Import from `@kaizenjir/baileys/src/antiban.js`:
 
 ```js
 const {
@@ -478,7 +478,7 @@ const {
     PresenceChoreographer, PostReconnectThrottle,
     RetryReasonTracker, LidResolver, JidCanonicalizer,
     MessageQueue, Scheduler, wrapSocket
-} = require('@badzz88/baileys/src/antiban')
+} = require('@kaizenjir/baileys/src/antiban')
 ```
 
 ### RateLimiter — throttle outbound messages
@@ -563,7 +563,7 @@ await sock.sendMessage(jid, { text })
 ### wrapSocket — apply all anti-ban layers at once
 
 ```js
-const { wrapSocket, resolveConfig, PRESETS } = require('@badzz88/baileys/src/antiban')
+const { wrapSocket, resolveConfig, PRESETS } = require('@kaizenjir/baileys/src/antiban')
 
 const wrappedSock = wrapSocket(sock, resolveConfig(PRESETS.SAFE))
 // All outbound sendMessage calls are now automatically rate-limited,
@@ -615,7 +615,7 @@ for search results). `table` accepts either a plain 2D array (first row = header
 ```js
 await sock.sendMessage(jid, {
     richResponse: {
-        text: 'Badzz88',
+        text: 'kaizenjir',
         table: [
             ['header1', 'header2'],
             ['X1', 'X2']
@@ -789,7 +789,7 @@ await sock.sendMessage(jid, { edit: msg.key, text: 'Updated text' })
 ## Manipulating Media
 
 ```js
-const { downloadMediaMessage } = require('@badzz88/baileys')
+const { downloadMediaMessage } = require('@kaizenjir/baileys')
 
 // Download
 const buffer = await downloadMediaMessage(msg, 'buffer', {})
@@ -997,12 +997,12 @@ sock.ws.on('CB:iq,,result', node => { })
 ## Extra Utilities
 
 A handful of batteries-included helpers on top of stock Baileys, importable from the
-main package (`require('@badzz88/baileys')` / top-level `Utils` exports):
+main package (`require('@kaizenjir/baileys')` / top-level `Utils` exports):
 
 ### Sticker Maker
 
 ```js
-const { imageToWebpSticker, videoToWebpSticker } = require('@badzz88/baileys')
+const { imageToWebpSticker, videoToWebpSticker } = require('@kaizenjir/baileys')
 
 const stickerBuf = await imageToWebpSticker(imageBuffer, {
 	packName: 'My Pack',
@@ -1020,7 +1020,7 @@ Downloads and saves view-once photos/videos/voice notes to disk the moment they 
 before the sender's app can mark them as opened.
 
 ```js
-const { autoCacheViewOnceMedia } = require('@badzz88/baileys')
+const { autoCacheViewOnceMedia } = require('@kaizenjir/baileys')
 
 const stop = autoCacheViewOnceMedia(sock, { cacheDir: './viewonce-cache' })
 // stop() to remove the listener later
@@ -1029,7 +1029,7 @@ const stop = autoCacheViewOnceMedia(sock, { cacheDir: './viewonce-cache' })
 ### Folder-Based Command Loader
 
 ```js
-const { createCommandHandler } = require('@badzz88/baileys')
+const { createCommandHandler } = require('@kaizenjir/baileys')
 
 createCommandHandler(sock, { commandsDir: './commands', prefix: '.' })
 ```
